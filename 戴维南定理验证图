@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="850" viewBox="0 0 1200 850">
+<rect width="1200" height="850" fill="#f7f9fc"/>
+<text x="600" y="48" text-anchor="middle" font-family="Arial,Microsoft YaHei" font-size="30" font-weight="bold" fill="#172b4d">戴维南定理验证：手算 vs PySpice 仿真</text>
+<text x="600" y="80" text-anchor="middle" font-family="Arial,Microsoft YaHei" font-size="16" fill="#5e6c84">Vs = 12 V，R1 = 1 kΩ，R2 = 2 kΩ，RL = 3 kΩ，端口 a-b</text>
+<!-- cards -->
+<rect x="55" y="115" width="520" height="245" rx="14" fill="white" stroke="#b3bac5" stroke-width="2"/>
+<rect x="625" y="115" width="520" height="245" rx="14" fill="white" stroke="#b3bac5" stroke-width="2"/>
+<text x="315" y="152" text-anchor="middle" font-family="Arial,Microsoft YaHei" font-size="22" font-weight="bold" fill="#0747a6">第一次仿真：开路电压 Vₒc</text>
+<text x="85" y="195" font-family="Arial,Microsoft YaHei" font-size="18" fill="#172b4d">移除 RL，端口 a-b 开路</text>
+<text x="85" y="235" font-family="Arial" font-size="20" fill="#172b4d">Vₒc = Vs · R2/(R1+R2) = 8.0000 V</text>
+<text x="85" y="285" font-family="Arial,Microsoft YaHei" font-size="18" fill="#172b4d">手算：8.0000 V</text>
+<text x="85" y="320" font-family="Arial,Microsoft YaHei" font-size="18" fill="#172b4d">PySpice：8.0000 V</text>
+<text x="470" y="320" text-anchor="end" font-family="Arial,Microsoft YaHei" font-size="18" fill="#00875a">误差：0.0000%</text>
+<text x="885" y="152" text-anchor="middle" font-family="Arial,Microsoft YaHei" font-size="22" font-weight="bold" fill="#0747a6">第二次仿真：短路电流 Iₛc</text>
+<text x="655" y="195" font-family="Arial,Microsoft YaHei" font-size="18" fill="#172b4d">端口 a-b 短接</text>
+<text x="655" y="235" font-family="Arial" font-size="20" fill="#172b4d">Iₛc = Vs/R1 = 12.0000 mA</text>
+<text x="655" y="285" font-family="Arial,Microsoft YaHei" font-size="18" fill="#172b4d">手算：12.0000 mA</text>
+<text x="655" y="320" font-family="Arial,Microsoft YaHei" font-size="18" fill="#172b4d">PySpice：12.0000 mA</text>
+<text x="1040" y="320" text-anchor="end" font-family="Arial,Microsoft YaHei" font-size="18" fill="#00875a">误差：0.0000%</text>
+<!-- derived -->
+<rect x="55" y="390" width="1090" height="110" rx="14" fill="#e9f2ff" stroke="#4c9aff" stroke-width="2"/>
+<text x="600" y="425" text-anchor="middle" font-family="Arial,Microsoft YaHei" font-size="22" font-weight="bold" fill="#0747a6">戴维南等效参数</text>
+<text x="350" y="468" text-anchor="middle" font-family="Arial" font-size="20" fill="#172b4d">Vth = Voc = 8.0000 V</text>
+<text x="850" y="468" text-anchor="middle" font-family="Arial" font-size="20" fill="#172b4d">Rth = Voc/Isc = 666.67 Ω</text>
+<!-- load comparison -->
+<rect x="55" y="530" width="1090" height="260" rx="14" fill="white" stroke="#b3bac5" stroke-width="2"/>
+<text x="600" y="568" text-anchor="middle" font-family="Arial,Microsoft YaHei" font-size="22" font-weight="bold" fill="#0747a6">接入负载后的等效验证（RL = 3 kΩ）</text>
+<text x="600" y="605" text-anchor="middle" font-family="Arial" font-size="19" fill="#172b4d">IL = Vth/(Rth+RL) = 2.1818 mA， UL = IL·RL = 6.5455 V</text>
+<line x1="85" y1="635" x2="1115" y2="635" stroke="#b3bac5" stroke-width="2"/>
+<text x="210" y="665" text-anchor="middle" font-family="Arial,Microsoft YaHei" font-size="17" font-weight="bold">电路</text>
+<text x="440" y="665" text-anchor="middle" font-family="Arial,Microsoft YaHei" font-size="17" font-weight="bold">手算 UL</text>
+<text x="650" y="665" text-anchor="middle" font-family="Arial,Microsoft YaHei" font-size="17" font-weight="bold">仿真 UL</text>
+<text x="850" y="665" text-anchor="middle" font-family="Arial,Microsoft YaHei" font-size="17" font-weight="bold">手算 IL</text>
+<text x="1040" y="665" text-anchor="middle" font-family="Arial,Microsoft YaHei" font-size="17" font-weight="bold">仿真 IL</text>
+<line x1="85" y1="680" x2="1115" y2="680" stroke="#dfe1e6" stroke-width="1"/>
+<text x="210" y="715" text-anchor="middle" font-family="Arial,Microsoft YaHei" font-size="17">原网络</text><text x="440" y="715" text-anchor="middle" font-family="Arial" font-size="17">6.5455 V</text><text x="650" y="715" text-anchor="middle" font-family="Arial" font-size="17">6.5455 V</text><text x="850" y="715" text-anchor="middle" font-family="Arial" font-size="17">2.1818 mA</text><text x="1040" y="715" text-anchor="middle" font-family="Arial" font-size="17">2.1818 mA</text>
+<text x="210" y="755" text-anchor="middle" font-family="Arial,Microsoft YaHei" font-size="17">戴维南等效电路</text><text x="440" y="755" text-anchor="middle" font-family="Arial" font-size="17">6.5455 V</text><text x="650" y="755" text-anchor="middle" font-family="Arial" font-size="17">6.5455 V</text><text x="850" y="755" text-anchor="middle" font-family="Arial" font-size="17">2.1818 mA</text><text x="1040" y="755" text-anchor="middle" font-family="Arial" font-size="17">2.1818 mA</text>
+</svg>
